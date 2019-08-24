@@ -1,19 +1,33 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import styled from "styled-components";
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Container>
+        <TitleBar>
+          <TitleText>Give.</TitleText>
+        </TitleBar>
+        <Given>
+          <Text>Given Today</Text>
+        </Given>
+      </Container>
     );
   }
 }
 
-const styles = styled.View`
+const Container = styled.View`
   flex: 1;
   background-color: #fff;
-  align-items: center;
-  justify-content: center;
 `;
+const TitleBar = styled.View`
+  margin-top: 90px;
+  margin-left: 40px;
+`;
+const TitleText = styled.Text`
+  font-size: 56px;
+  font-weight: 100;
+`;
+
+const Given = styled.View``;
+const Text = styled.Text``;
